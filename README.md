@@ -1,9 +1,13 @@
 <div align="center">
 
 <br/>
-
 ![Logo](swiftlylogo_git.png)
 <br/>
+
+<div align="center">
+  <img src="./swiftlylogo_git.png" width="150" />
+</div>
+
 
 **Swiftly — Modern E-Commerce Platform**
 
