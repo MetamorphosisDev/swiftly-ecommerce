@@ -2,7 +2,7 @@
 
 <br/>
 
-![Logo](./public/logo.png)
+![Logo](swiftlylogo_git.png)
 <br/>
 
 **Swiftly — Modern E-Commerce Platform**
