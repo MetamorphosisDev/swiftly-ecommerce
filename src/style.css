@@ -12,9 +12,13 @@
 }
 
 @theme dark {
-
+    
 }
 
-@theme {
+@theme color_Option {
+    --color-color_navigationbar_top: #F1F1F1;
+}
+
+@theme font {
     --font-inter: 'Inter', 'sans-serif'
 }

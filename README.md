@@ -1,11 +1,8 @@
-<div align="center">
-
-
 
 <br/>
 
 <div align="center">
-  <img src="./swiftlylogo_git.png" width="150" />
+  <img src="./swiftlylogo_git.png" width="200" />
 </div>
 
 <br/>
