@@ -11,12 +11,10 @@
     --color-neutral: #25353D;
 }
 
-@theme dark {
-    
-}
-
 @theme color_Option {
     --color-color_navigationbar_top: #F1F1F1;
+    --color-color_searchbar: #F2F2F7;
+    --color-graybar: #D3D3D3;
 }
 
 @theme font {

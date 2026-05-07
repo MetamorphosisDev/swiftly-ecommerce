@@ -5,6 +5,7 @@ if (scriptHtml) {
         const mainTs = document.createElement("script") as HTMLScriptElement
         mainTs.src = "src/main.ts"
 
+        // services-api.ts
         const ApiTs = document.createElement("script") as HTMLScriptElement
         ApiTs.src = "src/services/api.ts"
 
