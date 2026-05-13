@@ -1,1 +1,1 @@
-console.log("BASAH YUK");
+import 'flowbite'; 

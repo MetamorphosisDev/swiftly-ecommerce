@@ -9,10 +9,19 @@ if (scriptHtml) {
         const ApiTs = document.createElement("script") as HTMLScriptElement
         ApiTs.src = "src/services/api.ts"
 
-        const scripts: HTMLScriptElement[] = [mainTs, ApiTs]
+        // FlowBite plugin
+        const flowBite = document.createElement("script") as HTMLScriptElement
+        flowBite.src = "../node_modules/flowbite/dist/flowbite.min.js"
+
+        // componentsNavbar
+        const navHtml = document.createElement("script") as HTMLScriptElement
+        navHtml.src = "src/components/navbar.ts"
+
+        const scripts: HTMLScriptElement[] = [mainTs, ApiTs, flowBite, navHtml]
 
         scripts.forEach(s => {
                 scriptHtml?.appendChild(s)
         });
 }
+
 
