@@ -1,10 +1,8 @@
 type Apiconfig = {
-    FAKESTORE: string
-    ESCUELA: string
+    FAKESTORE: string, ESCUELA: string
 }
 
 export const API: Apiconfig = {
     FAKESTORE: "https://fakestoreapi.com",
-    ESCUELA: "https://api.escuelajs.co/api/v1",
+    ESCUELA: "https://api.escuelajs.co/api/v1"
 }
-

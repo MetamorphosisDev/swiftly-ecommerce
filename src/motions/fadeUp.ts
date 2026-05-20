@@ -1,1 +1,0 @@
-export const fadeUpanimated: string = `animate-fade-up animate-duration-500 animate-delay-100 animate-normal animate-fill-forwards`

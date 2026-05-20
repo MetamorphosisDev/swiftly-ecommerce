@@ -54,5 +54,3 @@ This project is developed as a **final semester assignment**, while also serving
 | Build Tool | Vite |
 
 ---
-
-## ✦ Project Structure
