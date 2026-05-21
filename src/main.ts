@@ -4,6 +4,9 @@ import "./pages/landingPage"
 
 // modules
 import "./motions/animatedUitailwind"
+import "./components/productView"
+import "./data/productType/productCategoryType"
+import "./data/productType/productType"
 
 // plugin
 import "flowbite"

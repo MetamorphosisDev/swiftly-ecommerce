@@ -3,6 +3,6 @@ type Apiconfig = {
 }
 
 export const API: Apiconfig = {
-    FAKESTORE: "https://fakestoreapi.com",
+    FAKESTORE: "https://fakestoreapi.com/products",
     ESCUELA: "https://api.escuelajs.co/api/v1"
 }
