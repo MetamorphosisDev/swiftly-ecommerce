@@ -13,7 +13,7 @@ function renderLandingPage() {
                 <div id="text"><p class="font-semibold text-xl ${animatedUI.fadeUp}">Kategori</p></div>
                 <div id="kategoryview" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5"></div>
             </div>
-            <div id="productApi"></div>
+            <div id="productApi" class="grid grid-cols-4 gap-4 p-10"></div>
         </div>
     `;
 
