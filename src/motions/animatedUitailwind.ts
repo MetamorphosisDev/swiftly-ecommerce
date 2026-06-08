@@ -1,5 +1,3 @@
-
-
 type configanimated = {
     fadeUp: string
 }

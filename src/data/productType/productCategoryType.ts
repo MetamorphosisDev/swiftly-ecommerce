@@ -11,4 +11,8 @@ export interface ProductType {
     category: string;
     image: string;
     rating: RatingType;
+    weight: number;
+    detail: string;
+    promo: string;
+
 }

@@ -1,14 +1,14 @@
 import "./services/apiCommerce"
 import "./components/navbar"
-import "./pages/landingPage"
+import "./components/productTerlaris"
 
-// modules
 import "./motions/animatedUitailwind"
 import "./components/productView"
 import "./data/productType/productCategoryType"
-import "./data/productType/productType"
+import "./data/productType"
 import "./utils/produkItem/currencyConverter"
 
-// plugin
 import "flowbite"
 
+import { renderLandingPage } from "./pages/landingPage"
+renderLandingPage()
