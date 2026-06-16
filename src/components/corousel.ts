@@ -6,35 +6,29 @@ export function corousel(): HTMLElement {
             <!-- Carousel wrapper -->
             <div class="relative h-56 overflow-hidden rounded-base md:h-96">
                 <!-- Item 1 -->
-                <a href="">
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://i.pinimg.com/1200x/6c/99/d8/6c99d8ccbb8145490827cb5d52c6678f.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
+                <a href="/page/corouselPageDetail.html?id_corousel=1">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/images/corousel/Corousel_1_promo50persen.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
                 </a>
                 <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://i.pinimg.com/1200x/86/3a/37/863a37e29c1cdce859713b1485b3ed3c.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
+                <a href="/page/corouselPageDetail.html?id_corousel=2">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/images/corousel/Corousel_2_BestsellerElektrtonik.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </a>
                 <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://i.pinimg.com/1200x/0e/94/7f/0e947fa54214d45922fbd0fda16b003d.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                </div>
+                <a href="/page/corouselPageDetail.html?id_corousel=3">
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/images/corousel/Corousel_3_WIB.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </a>
             </div>
             <!-- Slider indicators -->
             <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                 <button type="button" class="w-3 h-3 rounded-base" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                 <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                 <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
             </div>
             <!-- Slider controls -->
             <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>

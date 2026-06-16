@@ -1,14 +1,24 @@
 import "./services/apiCommerce"
 import "./components/navbar"
-import "./components/productTerlaris"
+import "./components/ViewProduct/productTerlaris"
+import "./components/ViewProduct/recommendedProducts"
+import "./components/footerComp"
+import "./components/ViewDiscount/promoView"
+import "./pages/corouselPageDetailsId"
+import "./pages/promoPageDetail"
+import "./pages/cart_Product"
+import "./pages/accountDetail_Swiftly_pg"
 
 import "./motions/animatedUitailwind"
-import "./components/productView"
-import "./data/productType/productCategoryType"
-import "./data/productType"
+import "./components/ViewProduct/productView"
+import "./data/TypeData_Object/product_TypeData"
+import "./data/productCategorylist"
 import "./utils/produkItem/currencyConverter"
+import "./motions/searchAnim"
 
 import "flowbite"
 
 import { renderLandingPage } from "./pages/landingPage"
 renderLandingPage()
+
+

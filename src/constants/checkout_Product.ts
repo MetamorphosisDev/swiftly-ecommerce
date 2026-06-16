@@ -1,0 +1,6 @@
+export const CHECKOUT = {
+    SHIPPING: { MINIMUM_FEE: 80, DEFAULT_FEE: 0.872, FREE_FEE: 0 },
+    TAX: { PPN_RATE: 0.011, },
+    DISCOUNT: { VOUCHER_RATE: 2.12, },
+    PAYMENT: { ADMIN_FEE: 1, }
+}

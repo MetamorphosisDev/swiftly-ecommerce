@@ -28,3 +28,12 @@
 @theme font {
     --font-inter: 'Inter', 'sans-serif'
 }
+
+.custom-scrollbar {
+    scrollbar-width:thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+#searchInput {
+  transition: opacity 0.3s ease;
+}

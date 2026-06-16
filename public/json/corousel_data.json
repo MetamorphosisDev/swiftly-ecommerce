@@ -1,0 +1,57 @@
+[
+    {
+        "id_corousel": 1,
+        "title": "Dapatkan Promo 50% di Akhir Bulan",
+        "subtitle": "Diskon terbesar untuk semua kategori pilihan",
+        "image": "/images/corousel/Corousel_1_promo50persen.png",
+        "banner_color": "#07B0EC",
+        "discount": "50%",
+        "start_date": "2026-06-25",
+        "end_date": "2026-06-30",
+        "category": "Semua Kategori",
+        "description": "Nikmati potongan harga hingga 50% untuk berbagai produk pilihan. Promo berlaku untuk kategori elektronik, fashion, rumah tangga, olahraga, dan kebutuhan sehari-hari selama periode akhir bulan.",
+        "benefits": [
+            "Diskon hingga 50%",
+            "Gratis ongkir untuk transaksi minimum Rp200.000",
+            "Cashback hingga Rp50.000"
+        ],
+        "status": "active"
+    },
+    {
+        "id_corousel": 2,
+        "title": "Segera Beli Barang Elektronik Terbaik",
+        "subtitle": "Promo spesial elektronik tanggal 27–28 Juni",
+        "image": "/images/corousel/Corousel_2_BestsellerElektrtonik.png",
+        "banner_color": "#FE6306",
+        "discount": "35%",
+        "start_date": "2026-06-27",
+        "end_date": "2026-06-28",
+        "category": "Elektronik",
+        "description": "Dapatkan berbagai produk elektronik favorit dengan harga spesial. Mulai dari smartphone, laptop, headphone, smartwatch, hingga aksesoris elektronik pilihan.",
+        "benefits": [
+            "Diskon hingga 35%",
+            "Cicilan 0%",
+            "Garansi resmi"
+        ],
+        "status": "active"
+    },
+    {
+        "id_corousel": 3,
+        "title": "Waktu Indonesia Belanja",
+        "subtitle": "Flash sale nasional dengan harga terbaik",
+        "image": "/images/corousel/Corousel_3_WIB.png",
+        "banner_color": "#55B968",
+        "discount": "70%",
+        "start_date": "2026-07-01",
+        "promo_code": "WIB70",
+        "category": "Flash Sale",
+        "description": "Waktu Indonesia Belanja kembali hadir dengan penawaran spesial hingga 70%. Ribuan produk dari berbagai kategori dapat dibeli dengan harga yang jauh lebih murah selama periode promo berlangsung.",
+        "benefits": [
+            "Diskon hingga 70%",
+            "Voucher tambahan",
+            "Gratis ongkir nasional",
+            "Cashback spesial"
+        ],
+        "status": "active"
+    }
+]

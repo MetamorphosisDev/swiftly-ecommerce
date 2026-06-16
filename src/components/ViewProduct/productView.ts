@@ -1,13 +1,13 @@
-import { API } from "../services/apiCommerce";
+import { API } from "../../services/apiCommerce";
 
-import type { ProductType } from "../data/productType/productCategoryType";
+import type { ProductType } from "../../data/TypeData_Object/product_TypeData";
 
-import { productCategorylist } from "../data/productType";
+import { productCategorylist } from "../../data/productCategorylist";
 
-import { upperCase_Letter } from "../utils/produkItem/uppercaseLatterfirst";
+import { upperCase_Letter } from "../../utils/produkItem/uppercaseLatterfirst";
 
-import { currencyConvert } from "../utils/produkItem/currencyConverter";
-import { idElementPageDetail } from "../navigation/navigationDetailProduct";
+import { currencyConvert } from "../../utils/produkItem/currencyConverter";
+import { idElementPageDetail } from "../../navigation/navigationDetailProduct";
 
 // Data
 let allProducts: ProductType[] = [];
@@ -42,7 +42,7 @@ function renderKategori(): void {
         el.classList.add(
             "flex", "items-center", "gap-3", "px-3", "py-1",
             "rounded-[10px]", "bg-[#ffffff]", "transition", "duration-300",
-            "hover:scale-105", "hover:shadow-sm", "animate-fade-up"
+            "hover:scale-105", "hover:shadow-sm", "animate-fade-up", "cursor-pointer"
         );
         el.style.animationDelay = `${index * 10}ms`;
 
@@ -144,12 +144,12 @@ function range_Product(): void {
     const container_Range = document.getElementById("kategory-Range") as HTMLElement
     container_Range.classList.add("animate-fade-up")
     container_Range.innerHTML = `
-    <button id="highest" class="bg-indigo-200 p-1 px-3 rounded-[10px] transition-all duration-200 hover:bg-indigo-300 relative overflow-hidden"><span class="absolute bg-indigo-300 w-20 h-20 rounded-full -top-8 -left-4"></span>
-    <span class="relative z-10">Harga Tertinggi</span>
+    <button id="highest" class="bg-indigo-200 p-1 px-3 rounded-[10px] transition-all duration-200 hover:bg-indigo-300 hover:scale-102 relative overflow-hidden"><span class="absolute bg-indigo-300 w-20 h-20 rounded-full -top-8 -left-4"></span>
+    <span class="relative z-10 cursor-pointer">Harga Tertinggi</span>
     </button>
 
-    <button id="lowest" class="bg-green-200 p-1 px-3 rounded-[10px] transition-all duration-200 hover:bg-green-300 relative overflow-hidden"><span class="absolute bg-green-300 w-20 h-20 rounded-full -top-8 -left-4"></span>
-    <span class="relative z-10">Harga Terendah</span>
+    <button id="lowest" class="bg-green-200 p-1 px-3 rounded-[10px] transition-all duration-200 hover:bg-green-300 hover:scale-102 relative overflow-hidden"><span class="absolute bg-green-300 w-20 h-20 rounded-full -top-8 -left-4"></span>
+    <span class="relative z-10 cursor-pointer">Harga Terendah</span>
     </button>
     `
     document.getElementById("highest")?.addEventListener("click", sortHighestPrice);
@@ -190,14 +190,16 @@ export async function initSearch(): Promise<void> {
         );
 
         result.innerHTML = "";
-
+        const searchResultdiv = document.getElementById("searchResult")
+        searchResultdiv?.classList.add("h-40")
         if (filtered.length === 0) {
+            searchResultdiv?.classList.replace("h-40", "h-15")
             result.innerHTML = `<p class="text-sm text-gray-400 px-4 py-3">Produk tidak ditemukan</p>`;
             result.classList.remove("hidden");
             return;
         }
 
-        filtered.slice(0, 4).forEach((product) => {
+        filtered.slice(0, 20).forEach((product) => {
             const item = document.createElement("div");
             item.className = "flex gap-3 items-center px-4 py-2.5 hover:bg-gray-200 cursor-pointer border-b border-gray-100 last:border-0 transition-all";
             item.innerHTML = `

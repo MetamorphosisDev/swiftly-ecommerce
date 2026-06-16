@@ -1,0 +1,85 @@
+[
+  {
+    "id_promo_valid": 1,
+    "title": "Flash Sale 50%",
+    "subtitle": "Diskon besar untuk produk elektronik pilihan",
+    "description": "Nikmati potongan harga hingga 50% untuk berbagai produk elektronik seperti smartphone, laptop, headphone, smartwatch, dan aksesoris pilihan lainnya.",
+    "discount": "50%",
+    "discount_Value": 50,
+    "promoCode": "FLASH50",
+    "startDate": "2026-07-01",
+    "validUntil": "2026-07-15",
+    "category": "Elektronik",
+    "claimed": 1250,
+    "quota": 5000,
+    "rating": 4.8,
+    "benefits": [
+      "Diskon hingga 50%",
+      "Gratis ongkir",
+      "Prioritas pengiriman"
+    ],
+    "terms": [
+      "Berlaku satu kali per akun",
+      "Tidak dapat digabung promo lain",
+      "Hanya kategori elektronik"
+    ],
+    "status": "active",
+    "color": "#FF7A1A"
+  },
+
+  {
+    "id_promo_valid": 2,
+    "title": "Gratis Ongkir Nasional",
+    "subtitle": "Belanja tanpa biaya pengiriman",
+    "description": "Nikmati gratis ongkir ke seluruh Indonesia tanpa minimum pembelian untuk berbagai kategori produk pilihan.",
+    "discount": "Free Shipping",
+    "discount_Value": 0,
+    "promoCode": "ONGKIRGRATIS",
+    "startDate": "2026-06-10",
+    "validUntil": "2026-06-30",
+    "category": "Semua Kategori",
+    "claimed": 3420,
+    "quota": 10000,
+    "rating": 4.9,
+    "benefits": [
+      "Gratis ongkir seluruh Indonesia",
+      "Tanpa minimum pembelian",
+      "Berlaku untuk ribuan produk"
+    ],
+    "terms": [
+      "Maksimum subsidi Rp100.000",
+      "Tidak berlaku untuk produk tertentu",
+      "Hanya untuk pengiriman reguler"
+    ],
+    "status": "active",
+    "color": "#1F6F5F"
+  },
+
+  {
+    "id_promo_valid": 3,
+    "title": "Cashback 20%",
+    "subtitle": "Belanja lebih hemat dengan cashback",
+    "description": "Dapatkan cashback hingga Rp100.000 untuk setiap transaksi menggunakan metode pembayaran digital yang didukung.",
+    "discount": "20%",
+    "discount_Value": 20,
+    "promoCode": "CASH20",
+    "startDate": "2026-07-15",
+    "validUntil": "2026-08-01",
+    "category": "Fashion & Lifestyle",
+    "claimed": 890,
+    "quota": 3000,
+    "rating": 4.7,
+    "benefits": [
+      "Cashback hingga Rp100.000",
+      "Berlaku untuk pembayaran digital",
+      "Proses cashback otomatis"
+    ],
+    "terms": [
+      "Cashback masuk maksimal 7 hari",
+      "Berlaku untuk metode pembayaran tertentu",
+      "Tidak dapat digabung promo cashback lain"
+    ],
+    "status": "active",
+    "color": "#443199"
+  }
+]

@@ -1,8 +1,7 @@
-import { API } from "../services/apiCommerce";
-import { currencyConvert } from "../utils/produkItem/currencyConverter";
-import { idElementPageDetail } from "../navigation/navigationDetailProduct";
-import { upperCase_Letter } from "../utils/produkItem/uppercaseLatterfirst";
-
+import { API } from "../../services/apiCommerce";
+import { currencyConvert } from "../../utils/produkItem/currencyConverter";
+import { idElementPageDetail } from "../../navigation/navigationDetailProduct";
+import { upperCase_Letter } from "../../utils/produkItem/uppercaseLatterfirst";
 
 
 // Fetch - Panggil
