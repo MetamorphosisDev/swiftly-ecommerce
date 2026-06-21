@@ -12,21 +12,21 @@ interface UserAddress {
 
 export interface UserRecord {
     id: string;
-    // akun
     name: string;
     username: string;
     email: string;
     passwordHash: string;
-    // profil
+
     image?: string;
-    phone?: string;
-    birthDate?: string;
-    gender?: string;
-    // alamat
+
+    phone: string;
+    birthDate: string;
+    gender: string;
+
     addresses: UserAddress[];
-    // metadata
-    role?: "user" | "admin";
-    isVerified?: boolean;
+
     createdAt: string;
+
     updatedAt?: string;
+
 }

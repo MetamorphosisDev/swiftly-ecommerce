@@ -1,8 +1,8 @@
 <!doctype html> 
 <html>
 <head>
-  <title>Swiftly — Platform</title>
-  <link rel="icon" type="image/png" href="swiftlyIcon.png" />
+  <title>Swiftly — Cart</title>
+  <link rel="icon" type="image/png" href="/swiftlyIcon.png" />
 
   <meta name="author" content="MetamorphosisDev">
   <meta name="description" content="Swiftly is a modern e-commerce web application, interface for seamless online shopping experiences.">
@@ -22,10 +22,17 @@
   <div id="navbar" class="bg-[#F9F9F9] fixed top-0 left-0 w-full z-50"></div>
 
   <!-- Main Content -->
-  <div id="main_Keranjang_Page" class="mt-30 px-10 overflow-y-auto custom-scrollbar">
+  <div class="flex mt-30 justify-between flex-col md:flex-row">
+
+    <div id="main_Keranjang_Page" class="overflow-y-auto custom-scrollbar w-full">
+    </div>
+    <div id="allProductPrice_tag" class="px-10"></div>
   </div>
+
+  <div id="HalalamanRiwayat_button" class="px-10"></div>
+
+
   <div id="Tambah_Produk_keranjang_button" class="px-10"></div>
-  <div id="allProductPrice_tag" class="px-8 sm:px-15"></div>
   <div class="flex justify-center py-5" id="clearCartDiv"></div>
   <!-- Footer -->
   <div id="footer_Web">

@@ -7,13 +7,15 @@ import { notification_Login_Register } from "../components/notifications_Element
 import { getCurrentUser } from "../auth/authService";
 import { addToCart } from "../services/cart_Services";
 import { NotificationsToast } from "../components/notifications_Element/productToast_product_Notification";
+import { addToWishlist } from "../services/wishlist_Services";
+import { removeWishlist } from "../services/wishlist_Services";
+import type { wishlistItem } from "../data/TypeData_Object/wishlistItem_Type";
+
 
 async function getDetailApi() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
-
     if (!id) return;
-
     const res = await fetch(API.FAKESTORE);
     const data: ProductType[] = await res.json();
 
@@ -137,7 +139,6 @@ function renderDetail(product: ProductType) {
                                 </svg>
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -160,24 +161,45 @@ function renderDetail(product: ProductType) {
         }
     })
 
-
-
+    const wishlist = JSON.parse(
+        localStorage.getItem("swiftly_wishlist") || "[]"
+    );
     const btn = document.getElementById("wishlistBtn");
     const icon = document.getElementById("wishlistIcon");
 
-    let liked = false;
+
+
+    let liked = wishlist.some(
+        (item: wishlistItem) => item.id === product.id
+    ); // True / False
+
+    if (liked) {
+        icon?.setAttribute("fill", "currentColor");
+        icon?.classList.remove("text-gray-400");
+        icon?.classList.add("text-red-500");
+    }
 
     btn?.addEventListener("click", () => {
-        liked = !liked;
+        if (!getCurrentUser()) {
+            notification_Login_Register();
+            return;
+        }
 
         if (liked) {
-            icon?.setAttribute("fill", "currentColor");
-            icon?.classList.remove("text-gray-400");
-            icon?.classList.add("text-red-500");
-        } else {
+            NotificationsToast("info", `Produk Dikeluarkan dari Wishlist`, "top-start", 2000)
+            removeWishlist(product.id);
             icon?.setAttribute("fill", "none");
             icon?.classList.remove("text-red-500");
             icon?.classList.add("text-gray-400");
+            liked = false;
+
+        } else {
+            NotificationsToast("success", `Produk Dimasukan ke Wishlist`, "top-start", 2000)
+            addToWishlist(product);
+            icon?.setAttribute("fill", "currentColor");
+            icon?.classList.remove("text-gray-400");
+            icon?.classList.add("text-red-500");
+            liked = true;
         }
     });
 }
@@ -258,6 +280,7 @@ function renderProduklainnya(products: ProductType[]) {
         `;
         grid.appendChild(el);
         idElementPageDetail(el, product.id)
+
     });
 }
 

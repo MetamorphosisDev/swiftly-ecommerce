@@ -1,16 +1,104 @@
 import { initSearch } from "./ViewProduct/productView"
 import { notification_Login_Register } from "./notifications_Element/Loginregister_Notification_Account";
 import { getCurrentUser } from "../auth/authService";
+import Swal from "sweetalert2";
 
 const currentUser = getCurrentUser();
+
 const el = document.getElementById("navbar")
 
 const authSection = currentUser
   ? `
-  <a href="/page/accountDetail.html" class="flex items-center gap-2 cursor-pointer transition-all hover:scale-102">
-    <img src="${currentUser.image || "/icon/iconProfile.svg"}" alt="Profile" class="w-8 h-8 bg-secondary p-0.5 rounded-full">
-    <p class="text-[14px] hover:text-secondary transition-all">${currentUser.username}</p>
-  </a>
+  <!-- Profile Button (Trigger Dropdown) -->
+<button id="dropdownInformationButton"
+    data-dropdown-toggle="dropdownInformation"
+    class="flex items-center gap-2 cursor-pointer transition-all hover:scale-[1.02]"
+    type="button">
+
+    <img src="${currentUser.image || "/icon/iconProfile.svg"}"
+        alt="Profile"
+        class="w-8 h-8 bg-secondary p-0.5 rounded-full">
+
+    <p class="text-[14px] hover:text-secondary transition-all">
+        ${currentUser.username}
+    </p>
+
+    <svg class="w-4 h-4 ml-1 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m19 9-7 7-7-7" />
+    </svg>
+</button>
+
+<!-- Dropdown -->
+<div id="dropdownInformation"
+    class="z-10 hidden bg-white border border-slate-200 rounded-xl shadow-lg w-72">
+
+    <!-- USER INFO -->
+    <div class="p-3 border-b border-slate-100">
+        <div class="flex items-center gap-3">
+
+            <img src="${currentUser.image || "/icon/iconProfile.svg"}"
+                class="w-9 h-9 rounded-full bg-secondary p-0.5">
+
+            <div class="text-sm">
+                <div class="font-medium text-slate-800">
+                    ${currentUser.username}
+                </div>
+                <div class="text-slate-500 text-xs truncate">
+                    ${currentUser.email}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MENU -->
+    <ul class="py-2 text-sm text-slate-600">
+
+        <li>
+            <a href="/page/accountDetail.html"
+                class="flex items-center gap-2 px-3 py-2 hover:bg-slate-100">
+                Account
+            </a>
+        </li>
+
+        <li>
+            <a href="/page/KeranjangProduk.html"
+                class="flex items-center gap-2 px-3 py-2 hover:bg-slate-100">
+                Keranjang
+            </a>
+        </li>
+
+        <li>
+            <a href="/page/wishlistProduk.html"
+                class="flex items-center gap-2 px-3 py-2 hover:bg-slate-100">
+                Wishlist
+            </a>
+        </li>
+
+        <li>
+            <a href="/page/riwayatPemesanan.html"
+                class="flex items-center gap-2 px-3 py-2 hover:bg-slate-100">
+                Riwayat Pemesanan
+            </a>
+        </li>
+
+        <li class="border-t mt-1 pt-1">
+            <a href="/page/settings.html"
+                class="flex items-center gap-2 px-3 py-2 hover:bg-slate-100">
+                Pengaturan
+            </a>
+        </li>
+
+        <li>
+            <button id="logoutBtn"
+                class="w-full text-left flex items-center gap-2 px-3 py-2 text-red-500 hover:bg-red-50 cursor-pointer">
+                Sign out
+            </button>
+        </li>
+    </ul>
+</div>
   `
   : `
         <a href="/page/login_Account.html">
@@ -121,9 +209,10 @@ if (el) {
       <img src="/icon/Suka.svg" alt="like" class="w-5" id="wishlist_daftar_handphone">
       <span class="text-sm">Favorit</span>
     </div>
-    <a href="" class="px-4 py-3 text-sm border-b border-gray-100 underline">Tentang Swiftly</a>
-    <a href="" class="px-4 py-3 text-sm border-b border-gray-100 underline">Murah dan Diskon</a>
-    <a href="" class="px-4 py-3 text-sm border-b border-gray-100 underline">Pengantaran Cepat dan Mudah</a>
+    <div class="flex items-center gap-4 px-4 py-3 border-b border-gray-100 cursor-pointer">
+      <img src="/icon/Suka.svg" alt="like" class="w-5" id="riwayatPembayaran">
+      <span class="text-sm">Riwayat Pembayaran</span>
+    </div>
     
     <div class="flex gap-3 px-4 py-4">
     ${authSection_handPhone}
@@ -134,7 +223,23 @@ if (el) {
   initSearch()
 }
 
-
+document.getElementById("logoutBtn")?.addEventListener("click", () => {
+  Swal.fire({
+    title: "Yakin mau keluar?",
+    text: "Kamu harus login lagi untuk masuk ke akun ini",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Ya, logout",
+    cancelButtonText: "Batal",
+    confirmButtonColor: "#ef4444",
+    cancelButtonColor: "#6b7280"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      localStorage.removeItem("swiftly_session");
+      window.location.href = "index.html";
+    }
+  });
+});
 
 function checkLoginAndRedirect(url: string) {
   if (currentUser) { window.location.href = url; }

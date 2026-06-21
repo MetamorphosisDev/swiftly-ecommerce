@@ -14,5 +14,4 @@ export interface ProductType {
     weight: number;
     detail: string;
     promo: string;
-
 }

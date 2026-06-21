@@ -1,7 +1,7 @@
 <!doctype html> 
 <html>
 <head>
-  <title>Swiftly — Platform</title>
+  <title>Swiftly — Cart</title>
   <link rel="icon" type="image/png" href="/swiftlyIcon.png" />
 
   <meta name="author" content="MetamorphosisDev">
@@ -18,13 +18,24 @@
   
 </head>
 <body class="font-inter bg-[#F9F9F9]">
-  <!-- Navigation bar -->
   <div id="navbar" class="bg-[#F9F9F9] fixed top-0 left-0 w-full z-50"></div>
 
   <!-- Main Content -->
-  <div id="main" class="mt-30">
+  <div class="mt-30 max-w-5xl mx-auto space-y-6">
+    <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+          <div>
+                  <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Riwayat Pembelian</h1>
+                  <p class="text-sm text-gray-500 mt-1">Pantau semua status transaksi dan pesanan Anda di sini.</p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full" id="transaksi_Num">
+                -
+              </span>
+    </div>
   </div>
-
+  <div class="py-5 pb-10">
+    <div id="main_Riwayat_Page" class="px-10 h-100 overflow-y-auto">
+   </div>
+  </div>
   <!-- Footer -->
   <div id="footer_Web">
   </div>
